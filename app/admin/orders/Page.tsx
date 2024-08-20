@@ -10,7 +10,7 @@ export default function Page() {
   const {data, error, isLoading} = useSWR<OrderWithProduct[]>(url, fetcher,{refreshInterval: 100000, revalidateOnFocus: false})
   // console.log(JSON.stringify(orders, null, 2))
 
-  if (isLoading) return <p>Cargando Ordenes...</p>
+  if (isLoading) return <p>...Cargando Ordenes...</p>
 
   if (data) return (
     <>
